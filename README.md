@@ -1,3 +1,8 @@
+前些天有人提出个想法，要八一八心灵，看看都有哪些人在跳。结果这么多天过去了，还没人拿出点东西来，于是我觉得要不新闻我来搞哈哈。
+改自 https://github.com/Puhao/ 的cc98爬虫
+抓取心灵前n页的帖子，记录到文件中，并用jieba做词频分析，最终结果在cut.txt。与原版相比，不需要mongodb，也没有多线程呵呵呵
+主程序go.py
+====
 CC98
 ====
 
@@ -18,11 +23,7 @@ CC98
 	```
 	pip install lxml
 	```
-3.	pymongo  
-	MongoDB的python接口  
-	```
-	pip install pymongo	
-	```
+
 4.	jieba  
 	用于分词  
 	`` pip install jieba ``

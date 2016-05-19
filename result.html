@@ -1,0 +1,1373 @@
+
+<html>
+<head>
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="alternate" type="application/rss+xml" title="查看新帖" href="boardrss.asp" />
+	<link rel="alternate" type="application/rss+xml" title="热门话题" href="rss.asp" />
+	
+	<title>心灵之约 &raquo; CC98论坛</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="inc/style.css" type="text/css">
+	<script type="text/javascript">
+		var currentUserID = 463860;
+		var currentBoardID = 182;
+		var bannerPath = 'banner/';
+		
+var bannerInfo = {"t":[{"p":"91611141096.gif","i":"771"},{"p":"91910402644.gif","i":"776"},{"p":"4281554668.jpg","i":"842"},{"p":"51616114836.gif","i":"854"},{"p":"5179182313.jpg","i":"855"}],"b":[]};
+
+	</script>
+	<script type="text/javascript" src="/js/md5.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/ccdialog.js"></script>
+	<script type="text/javascript" src="js/boardquery.js"></script>
+    
+    <script type="text/javascript">
+    function SetHome(obj,url) {
+        try {
+            obj.style.behavior = 'url(#default#homepage)';
+            obj.setHomePage(url);
+        } catch(e) {
+            if (window.netscape) {
+                try {
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                } catch(e) {
+                    alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将 [signed.applets.codebase_principal_support] 设置为 'true'");
+                }
+            } else {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将 '"+url+"' 设置为首页。");
+            }
+        }
+    }
+  
+    function AddFavorite(title, url) {
+        try {
+            window.external.addFavorite(url, title);
+        } catch (e) {
+            try {
+                window.sidebar.addPanel(title, url, "");
+            } catch (e) {
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请进入新网站后使用Ctrl+D进行添加");
+            }
+        }
+    }   
+    </script>
+    
+</head>
+
+<body  topmargin=0 leftmargin=0>
+
+	
+	<!-- 菜单 div -->
+	<div id="menuDiv" style='z-index: 2; display: none; width: 1px; position: absolute; height: 1px; background-color: #9cc5f8'></div>
+
+	<!-- 头部table -->
+	<table cellspacing="0" cellpadding="0" align="center" style="border: 1px #6595D6 solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 0px; border-left-width: 1px; width: 97%;">
+		<tr>
+			<td width="100%">
+
+				<!-- 真正的开始表格 外面那个是用来限制的 -->
+				<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+					<!-- ==============第一行横杠====================== -->
+					<tr>
+						<td class="TopDarkNav" height="9"></td>
+					</tr>
+					<!-- ==============logo和帮助====================== -->
+					<tr>
+						<td height="70" class="TopLighNav2">
+							<table border="0" width="100%" align="center">
+								<tr>
+									<!-- 小logo -->
+									<td align="left" width="25%">
+										<a href="/">
+											<img border="0" src="images/logo/logo.gif"></a>
+									</td>
+									<!-- 大logo -->
+									<td align="center" width="65%">
+										<div class="advImg" id="advImg"><a id="advLink" href="#" target="_blank"></a></div>
+										<script language="javascript">
+											showadvs(1);
+										</script>
+									</td>
+									<!-- 帮助 -->
+									<td align="right" style="line-height: 15pt" width="10%">
+										<a href="#"><span style="cursor: hand" onclick="AddFavorite('http://www.cc98.org', 'www.cc98.org');">加入收藏</span></a><br>
+										<a href="#"><span style="cursor: pointer" onclick="SetHome(this, 'http://www.cc98.org');">设为首页</span></a><br>
+										<a href="#"><span style="cursor: pointer" class="boardQueryLink" id="boardQueryLink">搜索版面</span></a><br>
+										<!--<a href="boardhelp.asp">论坛帮助</a>-->
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<!-- ==============第二行横杠====================== -->
+					<tr>
+						<td class="TopLighNav" height="9"></td>
+					</tr>
+					<!-- ============== 菜单 ====================== -->
+					<tr>
+						<td class="TopLighNav1" height="22" valign="top">
+							<div style="position: relative; margin-top: 2px">
+								<div style="position: absolute; width: 960px; top: 0px;">
+									&nbsp;&nbsp;
+		
+									<b>ph-test</b>&nbsp;&nbsp;
+			<a href="#" onmouseout='DelayHideMenu();' onmouseover='ShowMenu(this,logon,100);'>账号选项</a>
+									<img src="pic/navspacer.gif" align="absmiddle">
+									<a href="usermanager.asp" onmouseout='DelayHideMenu();' onmouseover='ShowMenu(this,manage2,100);'>控制面板</a>
+									
+									<!--<img src=pic/navspacer.gif align=absmiddle>
+		<a href="guidboard.asp" onmouseout='DelayHideMenu()' onMouseOver='ShowMenu(this,hotboard,100)'>热门版面</a>-->
+
+									<img src="pic/navspacer.gif" align="absmiddle">
+									<a href="query.asp?boardid=182" onmouseout='DelayHideMenu();' onmouseover='ShowMenu(this,Search,100);'>论坛搜索</a>
+									<img src="pic/navspacer.gif" align="absmiddle">
+									<!--<a href="#" onmouseout='DelayHideMenu()' onMouseOver='ShowMenu(this,stylelist,100)'>自选风格</a>
+		<img src=pic/navspacer.gif align=absmiddle>-->
+									<a href="boardstat.asp?boardid=182" onmouseout='DelayHideMenu();' onmouseover='ShowMenu(this,boardstat,100);'>论坛状态</a>
+									<!--
+		<img src=pic/navspacer.gif align=absmiddle>
+		<a href="show.asp?boardid=182" onmouseout='DelayHideMenu()' onMouseOver='ShowMenu(this,downlist,100)'>论坛展区</a>
+		-->
+									<!--<img src=pic/navspacer.gif align=absmiddle>
+		<a href="http://10.71.45.100/newblog" onmouseout='DelayHideMenu()' onMouseOver='ShowMenu(this,blog,100)' target="_blank">98blog</a>
+		<img src=pic/navspacer.gif align=absmiddle>
+		<a href="music.asp" onmouseout='DelayHideMenu()' onMouseOver='ShowMenu(this,music,100)'>点歌</a>-->
+									<img src="pic/navspacer.gif" align="absmiddle">
+									<a onmouseout='DelayHideMenu();this.style.cursor="auto";' onmouseover='ShowMenu(this,addon,100);this.style.cursor="pointer";' target="_blank">论坛附件</a>
+									<img src="pic/navspacer.gif" align="absmiddle">
+									<a href="boardhelp.asp" onmouseout='DelayHideMenu();' onmouseover='ShowMenu(this,help,100);'>论坛帮助</a>
+									
+									<img src="pic/navspacer.gif" align="absmiddle">
+									<a href="http://www.cc98.org/dispbbs.asp?BoardID=326&id=4019715" title="BUG 反馈">BUG 反馈</a>
+									<img src="pic/navspacer.gif" align="absmiddle" />
+									<a href="javascript:;" onclick="changeSimple(1)">Simple版</a>
+									<!--
+		<img src="pic/navspacer.gif" align="absmiddle">
+		<a href="http://bbs.cc98.org/" title="Alpha 就是比 Beta 更烂的...">2.0 Alpha</a>
+-->
+									
+								</div>
+								<div id="multiLogin"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+				<!-- 最外层 -->
+			</td>
+		</tr>
+	</table>
+	
+	<table cellspacing="1" cellpadding="3" align="center" border="0" width="97%">
+		<tr>
+			
+			<td width="65%"></td>
+			<td width="35%" align="right">
+				
+				<script type="text/javascript">
+					if(Browser.Engine.trident) {
+						document.write('<bgsound src="http://www.cc98.org/ring/1.mp3" border=0>');
+					} else {
+						document.write('<span style="height:0px;width:0px;visibility:hidden;overflow: hidden;"><object data="/inc/CC98ring.swf" type="application/x-shockwave-flash" width="1" height="1" flashvars="mp3=http://www.cc98.org/ring/1.mp3"><param name="movie" value="/inc/CC98ring.swf" /><param name="flashvars" value="mp3=http://www.cc98.org/ring/1.mp3" /></object></span>');
+					}
+				</script>
+				
+				<script type="text/javascript">openScript('messanger.asp?action=read&id=24099539',500,400)</script>
+				
+				<img src="pic/msg_new_bar.gif">
+				<a href="usersms.asp?action=inbox">我的收件箱</a> (<a href="javascript:openScript('messanger.asp?action=read&id=24099539',500,400)"><span style="color: #FF0000;">5 新</span></a>)
+		
+			</td>
+		</tr>
+	</table>
+	
+	<table cellspacing="1" cellpadding="3" align="center" class="tableBorder2">
+		<tr>
+			<td height="25" valign="middle">
+				
+				<img src="pic/Forum_nav.gif" align="absmiddle">
+				
+				<a href="index.asp">www.cc98.org</a> → 
+				<a href=list.asp?boardid=24>感性空间</a> →  <a href=list.asp?boardid=182&page=1>心灵之约</a> →  帖子列表
+				<a name="top"></a>
+			</td>
+		</tr>
+	</table>
+	<br>
+	
+<script type="text/javascript">
+	var canemcode=true;
+	var canimgcode=true;
+	var canmediacode=true;
+	var canimgsign=true;
+	var emotnum=72;
+	
+	var isSimple=false;
+	var emotdir='emot/';
+	
+	var icondir='images/files/';
+	var tdclass;
+</script>
+<script src="/js/Deleter.js" type="text/javascript"></script>
+<script src="/js/silverlight.js" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+			inlineMath: [ ["[m]","[/m]"] ],
+			displayMath: [ ["[math]","[/math]"] ],
+			ignoreClass: "noubb|code",
+			messageStyle: "none"
+			},
+
+ 		asciimath2jax: {
+			delimiters: [ ['[ma]','[/ma]'] ] 
+  			}
+		});
+</script>
+
+<script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-MML-AM_HTMLorMML&locale=zh-hans"></script>
+
+<link rel="stylesheet" href="/editor.md/css/editormd.min.css" />
+
+<script src="/editor.md/lib/marked.min.js"></script>
+<script src="/editor.md/lib/prettify.min.js"></script>
+
+<script src="/editor.md/lib/raphael.min.js"></script>
+<script src="/editor.md/lib/underscore.min.js"></script>
+<script src="/editor.md/lib/sequence-diagram.min.js"></script>
+<script src="/editor.md/lib/flowchart.min.js"></script>
+<script src="/editor.md/lib/jquery.flowchart.min.js"></script>
+
+<script type="text/javascript" src="/editor.md/editormd.min.js"></script>
+
+<script type="text/javascript">
+
+
+	function loadMdContents(){
+			$('.md-read').each(function(index, element){
+			var editor = editormd.markdownToHTML($(element).attr("id"), {
+				path: "/editor.md/lib/",
+				autoHeight: true,
+				emoji           : true,
+				taskList        : true,
+				tex             : true,  // 默认不解析
+				flowChart       : true,  // 默认不解析
+				sequenceDiagram : true  // 默认不解析
+			});
+		});
+	}
+	
+	window.onload = loadMdContents;
+
+</script>
+
+<!-- ACE Editor -->
+<script type="text/javascript" src="/AceEditor/ace.js"></script>
+
+<script src="/js/clientubb.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+	var lastPostInfo = function(id,jsonString){
+		var js = $.parseJSON(jsonString);
+		var topic = $('#topic_'+id);
+		var lastUser = $('#lastPost_'+id);
+
+		if(topic.length != 0){
+			topic.prop('title', topic.prop('title') + js.txt + '...');
+			if(js.usr != '匿名'){
+				lastUser.html('<a href="dispuser.asp?name='+encodeURIComponent(js.usr)+'">'+js.usr+'</a>');
+			}else{
+				lastUser.html('匿名');
+			}
+		}
+	}
+</script>
+
+<iframe width="0" height="0" id="hiddenframe" style="display: none"></iframe>
+
+<!--74827-->
+<script type="text/javascript" src="js/BoardSetting.js"></script>
+<script type="text/javascript" src="js/filter.js"></script>
+<table cellpadding="3" cellspacing="1" class="tableborder1" align="center">
+	<tr>
+		<th height="25" width="100%" align="left" id="tabletitlelink" style="font-weight: normal">总在线<b>1929</b>人，其中心灵之约上共有 <b>250</b> 位会员与 <b>
+			0</b> 位客人.今日帖子 <b><font color="#FF0000">365</font></b>
+			
+					[<a href="list.asp?action=show&boardID=182&page=1&skin=">显示详细列表</a>]
+				
+		</th>
+	</tr>
+
+	
+	
+	</td>
+	</tr>
+</table>
+
+
+
+<table align="center" style="width: 97%; margin: auto;">
+	<tr>
+		<td>
+			<p style="margin: 20px 10px 20px 10px">
+				<div id="ubbcode1" >[align=center]<BR>[color=#5566FF][b][size=7][font=微软雅黑]◆　[/font][/size][/b][/color][color=#3399FF][b][size=7][font=微软雅黑]欢　[/font][/size][/b][/color][color=#4FB5E2][b][size=7][font=微软雅黑]迎　[/font][/size][/b][/color][color=#6B99C6][b][size=7][font=微软雅黑]来　[/font][/size][/b][/color][color=#88B5A9][b][size=7][font=微软雅黑]到　[/font][/size][/b][/color][color=#A4998D][b][size=7][font=微软雅黑]心　[/font][/size][/b][/color][color=#C0B571][b][size=7][font=微软雅黑]灵　[/font][/size][/b][/color][color=#DD9954][b][size=7][font=微软雅黑]之　[/font][/size][/b][/color][color=#F9B538][b][size=7][font=微软雅黑]约　[/font][/size][/b][/color][color=#FF991C][b][size=7][font=微软雅黑]◆[/font][/size][/b][/color]<BR>[/align]<BR>[align=left]<BR>[b][size=3][font=微软雅黑]<BR>1. 请大家首先阅读[url=http://www.cc98.org/dispbbs.asp?boardID=182&ID=4424124&page=1#2][color=#6b9700]心灵之约版规[/color][/url]再发帖，如有违规不接受pm卖萌求情；<BR>2.本版就只剩下2个版主，在此诚征新版主，请去论坛事务版搜之前的版面负责人申请帖并遵循格式发帖，如有不明可以[url=http://www.cc98.org/messanger.asp?action=new&touser=%E5%94%90%E9%9B%AA%E8%A7%81][color=#0072ff]站短主管[/color][/url]咨询。<BR>3. [color=red][size=4]不要留联系方式！不要留联系方式！不要留联系方式！[/size]重要的事说三遍！[/color]<BR>4.更新了版规，[color=blue]增加了tp规则[/color]：成功诱导对方留联系方式的，tp1000d ；修订了锁沉规则：有意义言之有物、希望继续讨论的长篇读后感将给予保留。[/font]<BR>[/size][/b][/align]</div><script>searchubb('ubbcode1',4,'tablebody2');</script>
+			</p>
+		</td>
+	</tr>
+</table>
+
+
+
+		<br />
+		<table cellpadding="0" cellspacing="0" border="0" width="97%" align="center" valign="middle">
+			<tr style="vertical-align: bottom;">
+				<td style="width: 2px; text-align: center; margin: auto;"></td>
+				<td style="text-align: left;">
+					
+					<a href="announce.asp?boardid=182" title="发新帖">
+						<img src="pic/blue/postnew.gif" style="border: none;" alt="发新帖" /></a>
+					&nbsp;&nbsp;<a href="vote.asp?boardid=182" title="发起新投票"><img src="pic/blue/votenew.gif" style="border: none;" alt="发起新投票" /></a>
+					&nbsp;&nbsp;<a href="smallpaper.asp?boardid=182" title="发小字报"><img src="pic/blue/xzb.gif" style="border: none;" alt="发布小字报" /></a>
+
+					
+
+				</td>
+				<td style="text-align: right;"><a href="boardrss.asp?boardid=182" title="心灵之约上的最新话题">
+					<img src="pic/feed.gif" border="0" /></a> [<a href="customboard.asp?action=add&boardid=182">定制/取消定制本版</a>]&nbsp;&nbsp;&nbsp;<img src="pic/team2.gif" />&nbsp;<a href="dispuser.asp?name=%E5%94%90%E9%9B%AA%E8%A7%81" target=_blank title=点击查看该版主资料>唐雪见</a>&nbsp;<a href="dispuser.asp?name=6781287" target=_blank title=点击查看该版主资料>6781287</a>&nbsp;	  </td>
+			</tr>
+		</table>
+		<form action="master_batch.asp" method="post" name="batch" onsubmit="return checksearch();">
+			<table cellpadding="1" cellspacing="1" class="tableborder1 list-topic-table" align="center">
+				<tbody>
+					<tr>
+						<td class="tablebody1" colspan="5" height="20">
+							<table width="100%" style="table-layout: fixed;">
+								<tr>
+									<td valign="middle" height="20" width="50">
+										<a href="AllPaper.asp?boardid=182" title="点击查看本论坛所有小字报"><b>广播：</b></a>
+									</td>
+									<td width="*">
+										<!-- JLEEX Begin: 以后不要用全角的空格, 在 Firefox 下面会有方框的 -->
+										<marquee scrolldelay="150" scrollamount="4" onmouseout="if (document.all!=null){this.start()}" onmouseover="if (document.all!=null){this.stop()}">
+		
+		</marquee>
+										<!-- JLEEX End -->
+										<td align="right" width="320">
+											<a href="manage_boardmaster.asp?boardid=24">特殊权限</a> | <a href="list_best.asp?boardid=182" title="查看本版精华"><font color="#FF0000"><b>精华区</b></font></a>| <a href="list_reserve.asp?boardid=182" title="查看本版保存帖子">保存区</a> | <a href="info_stopposts.asp?boardid=182" title="查看本版停P用户"><b>停P</b></a> | <a href="boardstat.asp?reaction=online&boardid=182" title="查看本版在线详细情况">在线</a>| <a href="info_bbseven.asp?boardid=182" title="查看本版事件">事件</a>
+											<!-- | <a href=admin_boardset.asp?boardid=182>管理</a>-->
+											
+										</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+					<tr style="vertical-align: middle; height: 25px;">
+						<th style="text-wrap: none; width: 32px;">
+							<a href="list.asp?boardid=182&page=&action=batch">状态</a>
+						</th>
+						<th style="text-wrap: none;">主 题</th>
+						<th style="text-wrap: none; width: 80px;">作 者</th>
+						<th style="text-wrap: none; width: 150px;">回复/人气</th>
+						<th style="text-wrap: none; width: 220px;">最后更新 | 回复人</th>
+					</tr>
+					
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="总固顶主题">
+					<img src="pic/ztop.gif" style="border: none;" alt="总固顶主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4593133" href="dispbbs.asp?boardID=326&ID=4593133&page=" title="《[APP]MyCC98&#65288;CC98&#31227;&#21160;&#31471;iOS/Android&#65289;&#19979;&#36733;&#22320;&#22336;/&#26356;&#26032;&#26085;&#24535;/BUG&#21453;&#39304;》&#10;作者：hezyyn&#10;发表于2016/1/13 15:05:09&#10;最后跟贴：">
+					
+					<span style="font-weight: bold;color: #ff0000;">[APP]MyCC98&#65288;CC98&#31227;&#21160;&#31471;iOS/Android&#65289;&#19979;&#36733;&#22320;&#22336;...</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=326&ID=4593133&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=326&ID=4593133&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=326&ID=4593133&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=326&ID=4593133&star=4&page=1'><font color=#FF0000>4</font></a>  <a href='dispbbs.asp?boardID=326&ID=4593133&star=5&page=1'><font color=#FF0000>5</font></a> <a href='dispbbs.asp?boardID=326&ID=4593133&star=6&page=1'><font color=#FF0000>6</font></a></b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				52/34737
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=326&ID=4593133&star=32767#bottom">2016/5/18 9:54:37</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4593133"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4593133','{"usr":"ibubble","txt":"iOS版是不是没有搜索功能"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="总固顶主题">
+					<img src="pic/ztop.gif" style="border: none;" alt="总固顶主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4626324" href="dispbbs.asp?boardID=286&ID=4626324&page=" title="《&#9678;&#9678;&#9678;&#9678;&#9678;CC98&#21313;&#19977;&#21608;&#24180;&#22363;&#24198;&#24535;&#24895;&#32773;&#24320;&#22987;&#25307;&#21215;&#21862;&#9678;&#9678;&#9678;&#9678;&#9678;》&#10;作者：98&#31574;&#21010;&#37096;&#10;发表于2016/5/13 13:40:16&#10;最后跟贴：">
+					
+					<span style="font-weight: bold;color: #ff8080;">&#9678;&#9678;&#9678;&#9678;&#9678;CC98&#21313;&#19977;&#21608;&#24180;&#22363;&#24198;&#24535;&#24895;&#32773;&#24320;&#22987;&#25307;&#21215;&#21862;&#9678;&#9678;&#9678;&#9678;&#9678;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=286&ID=4626324&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=286&ID=4626324&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=286&ID=4626324&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=286&ID=4626324&star=4&page=1'><font color=#FF0000>4</font></a>  <a href='dispbbs.asp?boardID=286&ID=4626324&star=5&page=1'><font color=#FF0000>5</font></a> <a href='dispbbs.asp?boardID=286&ID=4626324&star=6&page=1'><font color=#FF0000>6</font></a></b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				54/2295
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=286&ID=4626324&star=32767#bottom">2016/5/17 0:31:48</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4626324"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4626324','{"usr":"青杨","txt":"&gt;&lt;I&gt;&lt;/I&..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="固顶主题">
+					<img src="pic/top.gif" style="border: none;" alt="固顶主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<img src="images/files/jpg.gif" />
+				
+				<a id="topic_4238943" href="dispbbs.asp?boardID=182&ID=4238943&page=" title="《&#12304;&#12288;&#24515;&#28789;&#20043;&#32422;&#23448;&#26041;&#26641;&#27934;&#12288;&#12305;》&#10;作者：&#27931;&#26360;&#10;发表于2013/9/6 23:03:07&#10;最后跟贴：">
+					
+					<span style="font-weight: bold;color: #00a3fb;">&#12304;&#12288;&#24515;&#28789;&#20043;&#32422;&#23448;&#26041;&#26641;&#27934;&#12288;&#12305;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4238943&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4238943&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4238943&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=182&ID=4238943&star=4&page=1'><font color=#FF0000>4</font></a> ... <a href='dispbbs.asp?boardID=182&ID=4238943&star=56&page=1'><font color=#FF0000>56</font></a> <a href='dispbbs.asp?boardID=182&ID=4238943&star=57&page=1'><font color=#FF0000>57</font></a> <a href='dispbbs.asp?boardID=182&ID=4238943&star=58&page=1'><font color=#FF0000>58</font></a></b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				575/71438
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4238943&star=32767#bottom">2016/5/17 21:30:19</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4238943"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4238943','{"usr":"匿名","txt":"同不希望没落<I></I> 楼上这种想法..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="固顶主题">
+					<img src="pic/top.gif" style="border: none;" alt="固顶主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4424124" href="dispbbs.asp?boardID=182&ID=4424124&page=" title="《&#12304;&#12288;&#24515;&#28789;&#20043;&#32422;&#29256;&#35268;&#12288;&#65372;&#12288;&#36827;&#29256;&#21457;&#24086;&#21069;&#24517;&#30475;&#160;&#12288;&#12305;&#12304;&#27491;&#24335;&#29256;&#12305;》&#10;作者：&#32000;&#23433;&#23433;&#12290;&#10;发表于2014/9/21 22:41:41&#10;最后跟贴：">
+					
+					<span style="font-weight: bold;color: #f96400;">&#12304;&#12288;&#24515;&#28789;&#20043;&#32422;&#29256;&#35268;&#12288;&#65372;&#12288;&#36827;&#29256;&#21457;&#24086;&#21069;&#24517;&#30475;&#160;&#12288;&#12305;&#12304;&#27491;&#24335;&#29256;&#12305;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4424124&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4424124&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4424124&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				29/27810
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4424124&star=32767#bottom">2014/9/24 2:03:14</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4424124"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4424124','{"usr":"匿名","txt":"<I></I> 所以呀，“處女”、“地域..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627373" href="dispbbs.asp?boardID=182&ID=4627373&page=" title="《&#26377;&#20154;&#21518;&#24724;&#36807;&#33258;&#24049;&#24403;&#21021;&#27809;&#21435;&#19978;&#36130;&#20040;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/16 23:02:59&#10;最后跟贴：">
+					
+					<span>&#26377;&#20154;&#21518;&#24724;&#36807;&#33258;&#24049;&#24403;&#21021;&#27809;&#21435;&#19978;&#36130;&#20040;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627373&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627373&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627373&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627373&star=4&page=1'><font color=#FF0000>4</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627373&star=5&page=1'><font color=#FF0000>5</font></a> <a href='dispbbs.asp?boardID=182&ID=4627373&star=6&page=1'><font color=#FF0000>6</font></a></b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				54/2930
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627373&star=32767#bottom">2016/5/18 11:59:17</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627373"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627373','{"usr":"匿名","txt":"em 12"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627686" href="dispbbs.asp?boardID=182&ID=4627686&page=" title="《&#24863;&#35273;&#33258;&#24049;&#24046;&#28857;&#23601;&#34987;&#28508;&#35268;&#21017;&#20102;...》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 22:24:50&#10;最后跟贴：">
+					
+					<span>&#24863;&#35273;&#33258;&#24049;&#24046;&#28857;&#23601;&#34987;&#28508;&#35268;&#21017;&#20102;...</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627686&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627686&star=2&page=1'><font color=#FF0000>2</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				19/1465
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627686&star=32767#bottom">2016/5/18 11:57:35</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627686"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627686','{"usr":"匿名","txt":"[em04]楼主好样的，但是，别以为所有..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627421" href="dispbbs.asp?boardID=182&ID=4627421&page=" title="《&#25105;&#26085;&#20320;&#22920;&#30340;&#22521;&#35757;&#24178;&#37096;&#65281;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 9:20:12&#10;最后跟贴：">
+					
+					<span>&#25105;&#26085;&#20320;&#22920;&#30340;&#22521;&#35757;&#24178;&#37096;&#65281;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627421&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627421&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627421&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				22/1564
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627421&star=32767#bottom">2016/5/18 11:51:01</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627421"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627421','{"usr":"匿名","txt":"顶"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627780" href="dispbbs.asp?boardID=182&ID=4627780&page=" title="《&#22909;&#32047;&#65292;&#22312;&#22992;&#24351;&#24651;&#21644;&#23478;&#22659;&#38382;&#39064;&#19978;&#21644;&#29238;&#27597;&#20135;&#29983;&#20102;&#20998;&#27495;&#65292;&#27714;&#24314;&#35758;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/18 11:18:29&#10;最后跟贴：">
+					
+					<span>&#22909;&#32047;&#65292;&#22312;&#22992;&#24351;&#24651;&#21644;&#23478;&#22659;&#38382;&#39064;&#19978;&#21644;&#29238;&#27597;&#20135;&#29983;&#20102;&#20998;&#27495;&#65292;&#27714;&#24314;&#35758;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627780&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627780&star=2&page=1'><font color=#FF0000>2</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				13/344
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627780&star=32767#bottom">2016/5/18 11:49:54</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627780"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627780','{"usr":"匿名","txt":"一、门当户对&lt;I&gt;&lt;/..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627708" href="dispbbs.asp?boardID=182&ID=4627708&page=" title="《&#35831;&#38382;&#30007;&#29983;&#19981;&#20250;&#20171;&#24847;&#33258;&#24049;&#30340;&#22899;&#26379;&#21451;&#26377;&#22899;&#26379;&#21451;&#21527;&#65311;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 23:37:11&#10;最后跟贴：">
+					
+					<span>&#35831;&#38382;&#30007;&#29983;&#19981;&#20250;&#20171;&#24847;&#33258;&#24049;&#30340;&#22899;&#26379;&#21451;&#26377;&#22899;&#26379;&#21451;&#21527;&#65311;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627708&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627708&star=2&page=1'><font color=#FF0000>2</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				14/782
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627708&star=32767#bottom">2016/5/18 11:47:48</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627708"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627708','{"usr":"匿名","txt":""}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627712" href="dispbbs.asp?boardID=182&ID=4627712&page=" title="《&#20570;&#21040;&#21518;&#38754;&#22969;&#23376;&#27809;&#21147;&#27668;&#20102;&#24590;&#20040;&#21150;&#8230;&#8230;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 23:49:24&#10;最后跟贴：">
+					
+					<span>&#20570;&#21040;&#21518;&#38754;&#22969;&#23376;&#27809;&#21147;&#27668;&#20102;&#24590;&#20040;&#21150;&#8230;&#8230;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627712&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627712&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627712&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				27/2022
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627712&star=32767#bottom">2016/5/18 11:45:30</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627712"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627712','{"usr":"匿名","txt":"明显是楼主活不行啊，妹子找个理由而已。"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627726" href="dispbbs.asp?boardID=182&ID=4627726&page=" title="《&#25105;&#23601;&#24819;&#30475;&#30475;&#26377;&#36319;&#25105;&#20204;&#23517;&#23460;&#19968;&#26679;&#30340;&#21527;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/18 0:26:50&#10;最后跟贴：">
+					
+					<span>&#25105;&#23601;&#24819;&#30475;&#30475;&#26377;&#36319;&#25105;&#20204;&#23517;&#23460;&#19968;&#26679;&#30340;&#21527;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627726&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627726&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627726&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627726&star=4&page=1'><font color=#FF0000>4</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627726&star=5&page=1'><font color=#FF0000>5</font></a> <a href='dispbbs.asp?boardID=182&ID=4627726&star=6&page=1'><font color=#FF0000>6</font></a></b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				52/1931
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627726&star=32767#bottom">2016/5/18 11:44:04</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627726"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627726','{"usr":"匿名","txt":""}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627776" href="dispbbs.asp?boardID=182&ID=4627776&page=" title="《&#39069;&#65292;&#27809;&#26377;&#21916;&#27426;&#30340;&#20154;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/18 10:59:56&#10;最后跟贴：">
+					
+					<span>&#39069;&#65292;&#27809;&#26377;&#21916;&#27426;&#30340;&#20154;</span>
+					
+				</a>
+				
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				5/146
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627776&star=32767#bottom">2016/5/18 11:41:49</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627776"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627776','{"usr":"匿名","txt":"直视自己hhh"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627684" href="dispbbs.asp?boardID=182&ID=4627684&page=" title="《&#30495;&#27491;&#30340;&#24651;&#29233;&#21040;&#24213;&#26159;&#19968;&#31181;&#20160;&#20040;&#26679;&#30340;&#24863;&#35273;&#21834;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 22:24:40&#10;最后跟贴：">
+					
+					<span>&#30495;&#27491;&#30340;&#24651;&#29233;&#21040;&#24213;&#26159;&#19968;&#31181;&#20160;&#20040;&#26679;&#30340;&#24863;&#35273;&#21834;</span>
+					
+				</a>
+				
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				9/510
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627684&star=32767#bottom">2016/5/18 11:40:58</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627684"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627684','{"usr":"匿名","txt":"累"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627736" href="dispbbs.asp?boardID=182&ID=4627736&page=" title="《&#30007;&#29983;&#24212;&#35813;&#24590;&#26679;&#25171;&#25198;&#33258;&#24049;&#65311;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/18 8:27:36&#10;最后跟贴：">
+					
+					<span>&#30007;&#29983;&#24212;&#35813;&#24590;&#26679;&#25171;&#25198;&#33258;&#24049;&#65311;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627736&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627736&star=2&page=1'><font color=#FF0000>2</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				16/583
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627736&star=32767#bottom">2016/5/18 11:37:08</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627736"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627736','{"usr":"匿名","txt":"其实有很多刚起步的健身狗，身材还是非常不..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627778" href="dispbbs.asp?boardID=182&ID=4627778&page=" title="《&#21738;&#37324;&#21487;&#20197;&#25343;&#21040;&#30871;&#38463;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/18 11:14:51&#10;最后跟贴：">
+					
+					<span>&#21738;&#37324;&#21487;&#20197;&#25343;&#21040;&#30871;&#38463;</span>
+					
+				</a>
+				
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				3/102
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627778&star=32767#bottom">2016/5/18 11:36:35</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627778"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627778','{"usr":"匿名","txt":"噗&lt;I&gt;&lt;/I&gt;..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627622" href="dispbbs.asp?boardID=182&ID=4627622&page=" title="《180&#21400;&#31859;,180&#27627;&#31859;,180&#24179;&#26041;&#31859;&#21738;&#20010;&#37325;&#35201;&#65311;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 19:09:59&#10;最后跟贴：">
+					
+					<span>180&#21400;&#31859;,180&#27627;&#31859;,180&#24179;&#26041;&#31859;&#21738;&#20010;&#37325;&#35201;&#65311;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627622&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627622&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627622&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627622&star=4&page=1'><font color=#FF0000>4</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				31/1558
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627622&star=32767#bottom">2016/5/18 11:34:49</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627622"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627622','{"usr":"匿名","txt":"你只要拥有一个，就会有看上你的妹子。最怕..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627746" href="dispbbs.asp?boardID=182&ID=4627746&page=" title="《&#20170;&#22825;&#25226;&#27704;&#35878;&#37027;&#20960;&#21482;&#27969;&#28010;&#29399;&#20030;&#25253;&#20102;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/18 9:28:05&#10;最后跟贴：">
+					
+					<span>&#20170;&#22825;&#25226;&#27704;&#35878;&#37027;&#20960;&#21482;&#27969;&#28010;&#29399;&#20030;&#25253;&#20102;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627746&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627746&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627746&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				26/824
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627746&star=32767#bottom">2016/5/18 11:25:03</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627746"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627746','{"usr":"匿名","txt":"2舍有只叫声又响又难听的鸟经常大清早来扰..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627464" href="dispbbs.asp?boardID=182&ID=4627464&page=" title="《&#24863;&#35273;&#29577;&#27849;&#32654;&#20029;&#30340;&#22899;&#29983;&#22909;&#22810;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 11:39:44&#10;最后跟贴：">
+					
+					<span>&#24863;&#35273;&#29577;&#27849;&#32654;&#20029;&#30340;&#22899;&#29983;&#22909;&#22810;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627464&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627464&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627464&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627464&star=4&page=1'><font color=#FF0000>4</font></a> ... <a href='dispbbs.asp?boardID=182&ID=4627464&star=7&page=1'><font color=#FF0000>7</font></a> <a href='dispbbs.asp?boardID=182&ID=4627464&star=8&page=1'><font color=#FF0000>8</font></a> <a href='dispbbs.asp?boardID=182&ID=4627464&star=9&page=1'><font color=#FF0000>9</font></a></b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				82/8249
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627464&star=32767#bottom">2016/5/18 11:22:55</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627464"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627464','{"usr":"匿名","txt":"P"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="热门主题">
+					<img src="pic/blue/hotfolder.gif" style="border: none;" alt="热门主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<img src="images/files/jpg.gif" />
+				
+				<a id="topic_4626846" href="dispbbs.asp?boardID=182&ID=4626846&page=" title="《&#25152;&#20197;&#35828;&#24494;&#21338;&#19978;&#30340;&#20667;&#36924;&#26159;&#36234;&#26469;&#36234;&#22810;&#20102;&#65311;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/15 12:11:35&#10;最后跟贴：">
+					
+					<span>&#25152;&#20197;&#35828;&#24494;&#21338;&#19978;&#30340;&#20667;&#36924;&#26159;&#36234;&#26469;&#36234;&#22810;&#20102;&#65311;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4626846&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4626846&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4626846&star=3&page=1'><font color=#FF0000>3</font></a>  <a href='dispbbs.asp?boardID=182&ID=4626846&star=4&page=1'><font color=#FF0000>4</font></a> ... <a href='dispbbs.asp?boardID=182&ID=4626846&star=10&page=1'><font color=#FF0000>10</font></a> <a href='dispbbs.asp?boardID=182&ID=4626846&star=11&page=1'><font color=#FF0000>11</font></a> <a href='dispbbs.asp?boardID=182&ID=4626846&star=12&page=1'><font color=#FF0000>12</font></a></b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				116/5698
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4626846&star=32767#bottom">2016/5/18 11:17:30</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4626846"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4626846','{"usr":"匿名","txt":"这是正能量啊"}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627682" href="dispbbs.asp?boardID=182&ID=4627682&page=" title="《&#21621;&#21621;&#19968;&#19979;12&#21270;&#23398;&#31995;&#30340;&#24464;&#26576;&#26576;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 22:21:15&#10;最后跟贴：">
+					
+					<span>&#21621;&#21621;&#19968;&#19979;12&#21270;&#23398;&#31995;&#30340;&#24464;&#26576;&#26576;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627682&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627682&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627682&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				25/1416
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627682&star=32767#bottom">2016/5/18 11:09:26</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627682"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627682','{"usr":"匿名","txt":"给你三天时间，说出你的故事，有料，有十大..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627710" href="dispbbs.asp?boardID=182&ID=4627710&page=" title="《&#22969;&#23376;&#20837;&#65292;&#20851;&#20110;&#28608;&#20809;&#33073;&#27611;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 23:40:43&#10;最后跟贴：">
+					
+					<span>&#22969;&#23376;&#20837;&#65292;&#20851;&#20110;&#28608;&#20809;&#33073;&#27611;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627710&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627710&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627710&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				23/879
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627710&star=32767#bottom">2016/5/18 11:04:26</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627710"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627710','{"usr":"匿名","txt":"明明就是遗传。如果洗澡能洗干净的话，那么..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627711" href="dispbbs.asp?boardID=182&ID=4627711&page=" title="《&#25441;&#32933;&#30338;&#26159;&#24590;&#20040;&#29609;&#30340;&#65311;&#38590;&#19981;&#25104;&#21035;&#20154;&#25733;&#23617;&#32929;&#30340;&#19968;&#30636;&#38388;JJ&#23601;&#33021;&#25554;&#36827;&#33738;&#33457;&#65311;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 23:48:32&#10;最后跟贴：">
+					
+					<span>&#25441;&#32933;&#30338;&#26159;&#24590;&#20040;&#29609;&#30340;&#65311;&#38590;&#19981;&#25104;&#21035;&#20154;&#25733;&#23617;&#32929;&#30340;&#19968;&#30636;&#38388;JJ&#23601;&#33021;&#25554;&#36827;&#33738;&#33457;&#65311;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627711&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627711&star=2&page=1'><font color=#FF0000>2</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				16/950
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627711&star=32767#bottom">2016/5/18 11:04:13</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627711"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627711','{"usr":"匿名","txt":"<I></I> [right][colo..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627687" href="dispbbs.asp?boardID=182&ID=4627687&page=" title="《&#22312;&#21738;&#25165;&#33021;&#25214;&#21040;&#29233;&#29609;&#28216;&#25103;&#30340;&#22969;&#23376; &#22312;&#21738;&#25165;&#33021;&#25214;&#21040;&#29233;&#29609;&#28216;&#25103;&#30340;&#22969;&#23376; &#22312;&#21738;&#25165;&#33021;&#25214;&#21040;&#29233;&#29609;&#28216;&#25103;&#30340;&#22969;&#23376;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 22:28:42&#10;最后跟贴：">
+					
+					<span>&#22312;&#21738;&#25165;&#33021;&#25214;&#21040;&#29233;&#29609;&#28216;&#25103;&#30340;&#22969;&#23376; &#22312;&#21738;&#25165;&#33021;&#25214;&#21040;&#29233;&#29609;&#28216;&#25103;&#30340;&#22969;&#23376; &#22312;&#21738;&#25165;&#33021;&#25214;&#21040;&#29233;...</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627687&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627687&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627687&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				24/552
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627687&star=32767#bottom">2016/5/18 11:03:57</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627687"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627687','{"usr":"匿名","txt":"<I></I> 不勾搭，但你好歹给个传送..."}');</script>
+		
+		<tr style="vertical-align: middle;">
+			<td style="text-wrap: none; width: 32px; height: 27px; text-align: center;" class="tablebody2">
+				
+				<span title="开放主题">
+					<img src="pic/blue/folder.gif" style="border: none;" alt="开放主题" /></span>
+				
+			</td>
+			<td style="text-align: justify;" class="tablebody1">
+
+				 &nbsp;
+				
+				<a id="topic_4627704" href="dispbbs.asp?boardID=182&ID=4627704&page=" title="《&#29616;&#22312;&#27993;&#22823;&#20154;&#24535;&#21521;&#30495;&#26159;&#36234;&#26469;&#36234;&#23567;&#20102;》&#10;作者：&#21311;&#21517;&#10;发表于2016/5/17 23:25:36&#10;最后跟贴：">
+					
+					<span>&#29616;&#22312;&#27993;&#22823;&#20154;&#24535;&#21521;&#30495;&#26159;&#36234;&#26469;&#36234;&#23567;&#20102;</span>
+					
+				</a>
+				&nbsp;&nbsp;[<img src=pic/multipage.gif><b> <a href='dispbbs.asp?boardID=182&ID=4627704&star=1&page=1'><font color=#FF0000>1</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627704&star=2&page=1'><font color=#FF0000>2</font></a>  <a href='dispbbs.asp?boardID=182&ID=4627704&star=3&page=1'><font color=#FF0000>3</font></a> </b>]
+			</td>
+
+			<!-- 显示作者 -->
+			
+			<td style="text-wrap: none; width: 80px; text-align: center; margin: auto;" class="tablebody2">匿名</td>
+			
+
+			<!-- 投票票数或者点击率 -->
+			<td style="text-wrap: none; text-align: center; margin: auto;" class="tablebody1">
+				25/1231
+			</td>
+
+			<!-- 最后回复时间和作者 -->
+			<td width="220" align="left" style="text-wrap: none;" class="tablebody2">&nbsp;<a href="dispbbs.asp?boardID=182&ID=4627704&star=32767#bottom">2016/5/18 10:46:04</a>&nbsp;<span style="color: #FF0000;">|</span>&nbsp;<span id="lastPost_4627704"></span>
+			</td>
+		</tr>
+
+		
+		<script type="text/javascript">lastPostInfo('4627704','{"usr":"匿名","txt":"1w2w3w是没什么区别。但是3-4k和..."}');</script>
+		
+				</tbody>
+			</table>
+		</form>
+
+		
+
+		<form method="post" action="list.asp?boardid=182&action=">
+			<table border="0" cellpadding="0" cellspacing="3" style="width: 97%; text-align: center; margin: auto; border-style: none; border-width: 0px;">
+				<tr>
+					<td style="text-wrap: none; vertical-align: middle; margin: auto; text-align: left;">页次：<b>1</b>/<b>3742</b>页 每页<b>20</b> 主题数<b>
+						74827</b></td>
+					<td valign="middle" style="text-wrap: none;">
+						<div align="right">
+							分页:
+											<font color=#FF0000>首页</font>   <b><font color=#FF0000>1</font> <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=2&action='>2</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=3&action='>3</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=4&action='>4</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=5&action='>5</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=6&action='>6</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=7&action='>7</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=8&action='>8</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=9&action='>9</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=10&action='>10</a>   <a title="可以使用Alt+PageUp或Alt+PageDown快捷翻页"   href='?boardid=182&page=11&action='>11</a>   </b><a href='?boardid=182&page=12&action=' title=下十页>>>></a>   <a href='?boardid=182&page=3742&action=' title=尾页>尾页</a>   
+							<span title="已经是第一页" style="color: gray;">[上一页]</span>
+							
+							<a title="跳转到下一页" href="?BoardID=182&page=2&action=">[下一页]</a>
+							
+
+转到:<input type="text" name="Page" size="3" maxlength="10" value="1" />
+							<input type="submit" value="Go" name="submit" />
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</form>
+		
+		<table border="0" cellpadding="0" cellspacing="3" width="97%" align="center">
+			<tr>
+				<form method="POST" action="queryresult.asp?boardid=182&sType=2&SearchDate=1000&pSearch=1">
+					<td width="50%" valign="middle" style="text-wrap: none;" height="40">快速搜索 1000 天内主题：<input type="text" name="keyword">&nbsp;<input type="submit" name="submit" value="搜索">
+					</td>
+				</form>
+				<td valign="middle" style="text-wrap: none;" width="50%">
+					<div align="right">
+				</td>
+				<!-- =======================================  跳转  ================================-->
+				<td valign="middle" style="text-wrap: none;" align="right">
+					<select id="personal" onchange="if(this.options[this.selectedIndex].value!=''){location=this.options[this.selectedIndex].value;}">
+						<option selected>个人定制区...</option>
+						<option value="hottopic.asp">今日十大热门主题</option>
+					</select></td>
+			</tr>
+		</table>
+		<a name="bottom"></a>
+		<script type="text/javascript">var jsonBoardList = [{boardid:'68',boardname:'学习交流'},{boardid:'182',boardname:'心灵之约'},{boardid:'184',boardname:'论坛帮助'},{boardid:'197',boardname:'军训生活'},{boardid:'198',boardname:'新生宝典'},{boardid:'315',boardname:'98网事'}];var customBoardList = [198,184,68,315,197,182];var len = customBoardList.length;var _personal = document.getElementById("personal");for(var i=0 ; i < len ; i ++){ for(var j=0 ; j< len ; j++){ if(customBoardList[i] == jsonBoardList[j].boardid){var s= new Option(jsonBoardList[j].boardname,'list.asp?boardid='+jsonBoardList[j].boardid);_personal.options.add(s);break; }}}</script>
+	<div id="copyright">Copyright &copy; 2003-2016 CC98 Network Association. Email: contact@cc98.org</div>
+	
+</body>
+</html>
+
+<!--end:46.875毫秒-->
+
+
+		<script type="text/javascript">
+
+			function _shortcut(evt)
+			{
+				
+				var fileName="list.asp";
+				var star=parseInt("1");
+				//
+
+				var origin_search="?boardid=182&action=";
+	
+				var evt=evt?evt:window.event;
+				if(star==""&star==0) star=1;
+	
+				var nextStar=1;
+	
+				if(evt.altKey&&evt.keyCode==33){
+					if(star<=1) return;
+					nextStar=star-1;
+					window.location.href=fileName+origin_search+"&page="+nextStar;
+				}else if (evt.altKey && evt.keyCode == 34){
+					//if(star>=total_star) return;
+					nextStar=star+1;
+					window.location.href=fileName+origin_search+"&page="+nextStar;
+				}else if(evt.altKey && evt.keyCode == 45){
+					//快捷键 发表新帖
+					window.location.href="announce.asp?BoardID=182";
+				}else if (evt.altKey&&evt.keyCode==36){
+					//快捷键 回到首页
+					window.location.href="index.asp";
+				}else if (evt.altKey&&evt.keyCode==35){
+					//快捷键 定焦个人定制跳转
+					document.getElementById("personal").click();
+				}
+
+			}
+			if(window.document.addEventListener){
+				window.document.addEventListener("keydown",_shortcut,false);
+			}else{
+				window.document.attachEvent("onkeydown",_shortcut,false);
+			}
+
+
+		</script>
+		
